@@ -6,7 +6,7 @@ export default class Axios extends React.Component {
     jokes: []
   };
   componentDidMount() {
-    axios.get(`http://api.icndb.com/jokes`).then(res => {
+    axios.get(`http://localhost:2500/jokes`).then(res => {
       const jokes = res.data;
       this.setState({ jokes });
     });
