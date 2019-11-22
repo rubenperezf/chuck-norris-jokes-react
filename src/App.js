@@ -3,11 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import Joke from './components/Joke'
 import Axios from './components/Axios'
+import Form from './components/Form'
 
 function App() {
   return (
     <div className="App">
-      <Axios></Axios>
+      <Form></Form>
     </div>
   );
 }
