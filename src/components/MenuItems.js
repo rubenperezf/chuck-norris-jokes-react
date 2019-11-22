@@ -11,22 +11,22 @@ import {
 
 export default class Axios extends React.Component {
   state = {
-    catagories: []
+    categories: []
   };
   componentDidMount() {
-    axios.get(`http://api.icndb.com/jokes/catagories`).then(res => {
-      const catagories = res.data;
-      this.setState({ catagories });
+    axios.get(`https://api.chucknorris.io/jokes/categories`).then(res => {
+      const categories = res.data;
+      this.setState({ categories });
     });
   }
   render() {
-    if (this.state.catagories.value === undefined) {
+    if (this.state.categories.value === undefined) {
       return <h1>Not here</h1>;
     }
     return (
       <Select>
-        {this.state.catagories.value.map(catagories => (
-          <MenuItem key={catagories}>{catagories.catagory}</MenuItem>
+        {this.state.categories.value.map( => (
+          <MenuItem key={this.state.categories.indexOf(category)}>{categories.catagory}</MenuItem>
         ))}
       </Select>
     );
